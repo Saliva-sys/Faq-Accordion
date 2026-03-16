@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --color-white: hsl(0deg 100% 100%);
+    --color-purple-100: hsl(275deg 100% 97%);
+    --color-purple-600: hsl(292deg 16% 49%);
+    --color-purple-950: hsl(292deg 42% 14%);
+    --color-blue: hsl(228deg 45% 44%);
+    --font-main: 'Work Sans', sans-serif;
+    --font-weight-main: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-main);
+    background-image: url('/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--color-purple-100);
+}
+
+.main__space {
+    background-color: rgb(43, 38, 38);
+}
+
+.faq__main-title {
+    background-color: blue;
+}
+
+.faq__space {
+    background-color: coral;
+}
+
+.faq__area {
+    background-color: cyan;
+}
+
+.faq__button {
+    background-color: chartreuse;
+}
+
+.faq__title {
+    background-color: darkgreen;
+}
+
+.faq__icon {
+    background-color: crimson;
+}
+
+.faq__answer {
+    background-color: darkolivegreen;
+}
+
+
+
+
+/* DEFINOVANIE FOOTER */
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution-link {
+    color: var(--color-blue);
+}
+
+/* Desktop version */
+@media (width >= 64rem) {
+    body {
+        background-image: url('/background-pattern-desktop.svg');
+    }
+}
