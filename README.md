@@ -46,8 +46,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Github repository](https://github.com/Saliva-sys/My-Work/tree/main/apps/faq-accordion)
-- Live Site URL: [Run locally](http://localhost:5174/)
+- Solution URL: [Github repository](https://github.com/Saliva-sys/Faq-Accordion.git)
+- Live Site URL: [RLive URL](http://localhost:5174/)
 
 ## My process
 
@@ -59,10 +59,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Vite](https://vitejs.dev/) - Build tool
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
