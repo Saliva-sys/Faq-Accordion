@@ -14,48 +14,64 @@
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+body {    
+    min-height: 100vh;
     padding: 0;
     margin: 0;
     font-family: var(--font-main);
     font-weight: var(--font-weight-main);
-    background-image: url('/background-pattern-mobile.svg');
+    background-image: url('./background-pattern-mobile.svg');
     background-repeat: no-repeat;
-    background-color: var(--color-purple-100);
+    background-color: var(--color-purple-100);    
 }
 
 .main__space {
-    background-color: rgb(43, 38, 38);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block-start: clamp(0.9rem, calc(1.035rem - 0.15vw), 1rem);
+    margin-inline-start: clamp(1.5rem, calc(-7.197rem + 37.108vw), 26.2rem);
+    height: clamp(33rem, calc(32.12rem + 3.756vw), 35.5rem);
+    width: clamp(20.5rem, calc(14.496rem + 25.615vw), 37.55rem);
+    background-color: rgb(218, 6, 6);
 }
 
 .faq__main-title {
+    margin: 0;
     background-color: blue;
+    opacity: 0.1;
 }
 
 .faq__space {
     background-color: coral;
+    opacity: 0.2;
 }
 
 .faq__area {
     background-color: cyan;
+    opacity: 0.2;
 }
 
 .faq__button {
     background-color: chartreuse;
+    opacity: 0.2;
 }
 
 .faq__title {
+    margin: 0;
     background-color: darkgreen;
+    opacity: 0.2;
 }
 
 .faq__icon {
     background-color: crimson;
+    opacity: 0.2;
 }
 
 .faq__answer {
+    margin: 0;
     background-color: darkolivegreen;
+    opacity: 0.2;
 }
 
 
@@ -74,6 +90,8 @@ body {
 /* Desktop version */
 @media (width >= 64rem) {
     body {
-        background-image: url('/background-pattern-desktop.svg');
+        background-image: url('./background-pattern-desktop.svg');
     }
+
+    
 }

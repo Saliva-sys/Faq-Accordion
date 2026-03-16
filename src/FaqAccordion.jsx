@@ -24,7 +24,7 @@ const FaqAccordion = () => {
     <main>
         <div className="main__space">
             <h1 className="faq__main-title">
-                <img src="/icon-star.svg" alt="star"/>
+                <img src="./icon-star.svg" alt="star"/>
                 FAQs</h1>
 
             <section className="faq__space">
@@ -35,8 +35,8 @@ const FaqAccordion = () => {
                             <h2 className="faq__title">{item.title}</h2>
                             <span className="faq__icon">
                                 {openId === item.id 
-                                    ? <img src="/icon-plus.svg" alt="plus" /> 
-                                    : <img src="/icon-minus.svg" alt="minus"/>
+                                    ? <img src="./icon-plus.svg" alt="plus" /> 
+                                    : <img src="./icon-minus.svg" alt="minus"/>
                                 }
                             </span>
                         </button>

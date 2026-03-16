@@ -47,7 +47,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github repository](https://github.com/Saliva-sys/Faq-Accordion.git)
-- Live Site URL: [RLive URL](http://localhost:5174/)
+- Live Site URL: [Live URL](https://saliva-sys.github.io/Faq-Accordion/)
 
 ## My process
 
