@@ -1,4 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+/* Základné variabilné písmo */
+@font-face {
+  font-family: 'Work Sans';
+  /* Cesta k variabilnému súboru */
+  src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+  /* Rozsah váh, ktoré tento súbor dokáže zobraziť */
+  font-weight: 100 900; 
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variabilná kurzíva */
+@font-face {
+  font-family: 'Work Sans';
+  src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
     --color-white: hsl(0deg 100% 100%);
@@ -10,8 +28,17 @@
     --font-weight-main: 400;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
+}
+
+h1, h2, p, span, button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {    
@@ -19,66 +46,86 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--font-main);
-    font-weight: var(--font-weight-main);
-    background-image: url('./background-pattern-mobile.svg');
+    background-image: url('/background-pattern-mobile.svg');
     background-repeat: no-repeat;
-    background-color: var(--color-purple-100);    
+    background-color: var(--color-purple-100);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+    text-rendering: optimizeLegibility;
 }
 
 .main__space {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-block-start: clamp(0.9rem, calc(1.035rem - 0.15vw), 1rem);
-    margin-inline-start: clamp(1.5rem, calc(-7.197rem + 37.108vw), 26.2rem);
-    height: clamp(33rem, calc(32.12rem + 3.756vw), 35.5rem);
-    width: clamp(20.5rem, calc(14.496rem + 25.615vw), 37.55rem);
-    background-color: rgb(218, 6, 6);
+    margin-block-start: clamp(8.92rem, calc(8.381rem + 2.299vw), 10.45rem);
+    margin-inline-start: clamp(1.5rem, calc(-7.215rem + 37.183vw), 26.25rem);
+    padding-inline: clamp(1.5rem, calc(1.141rem + 1.532vw), 2.52rem) clamp(1.55rem, calc(1.216rem + 1.427vw), 2.5rem);
+    height: clamp(33rem, calc(32.19rem + 3.455vw), 35.3rem);
+    width: clamp(20.5rem, calc(14.514rem + 25.54vw), 37.5rem);
+    background-color: var(--color-white);
+    border-radius: clamp(0.5rem, calc(0.324rem + 0.751vw), 1rem);
 }
 
 .faq__main-title {
-    margin: 0;
-    background-color: blue;
-    opacity: 0.1;
+    display: flex;
+    gap: 1.51rem;
+    padding-block-start: clamp(1.5rem, calc(1.151rem + 1.487vw), 2.49rem);
+    padding-block-end: clamp(1.5rem, calc(1.324rem + 0.751vw), 2rem);
 }
 
-.faq__space {
-    background-color: coral;
-    opacity: 0.2;
+.title__faq {
+    font-size: clamp(1.94rem, calc(1.387rem + 2.347vw), 3.50rem);
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    color: rgb(57, 247, 9);
 }
 
-.faq__area {
-    background-color: cyan;
-    opacity: 0.2;
+.title__icon {    
+    width: clamp(1.5rem, calc(1.148rem + 1.502vw), 2.5rem);
 }
 
 .faq__button {
-    background-color: chartreuse;
-    opacity: 0.2;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    gap: 1rem;
+    border: none;
+    background-color: aqua;
 }
 
-.faq__title {
-    margin: 0;
-    background-color: darkgreen;
-    opacity: 0.2;
+.faq__title {   
+    font-size: clamp(1.00rem, calc(0.967rem + 0.141vw), 1.09rem);
+    font-weight: 600;
+    line-height: 1.19;
 }
 
 .faq__icon {
-    background-color: crimson;
-    opacity: 0.2;
+    display: flex;
 }
 
 .faq__answer {
-    margin: 0;
-    background-color: darkolivegreen;
-    opacity: 0.2;
+    font-size: clamp(0.88rem, calc(0.827rem + 0.207vw), 1.01rem);
+    line-height: 1.49;
+    letter-spacing: -0.002rem;
+    padding-block-start: 1.5rem;
 }
 
+.faq__divider {
+    height: 0.0695rem;
+    border: none;
+    background-color: rgb(230, 5, 5);
+    margin-block: clamp(1.25rem, calc(1.137rem + 0.481vw), 1.57rem) clamp(1.23rem, calc(1.163rem + 0.285vw), 1.42rem);
+}
 
-
+.faq__area:last-child hr {
+    display: none;
+}
 
 /* DEFINOVANIE FOOTER */
 .attribution {
+    padding-block-start: 0.5rem;
     font-size: 0.6875rem;
     text-align: center;
 }
@@ -90,8 +137,19 @@ body {
 /* Desktop version */
 @media (width >= 64rem) {
     body {
-        background-image: url('./background-pattern-desktop.svg');
+        background-image: url('/background-pattern-desktop.svg');
     }
 
-    
+    .title__faq {
+        letter-spacing: -0.02rem;
+    }
+
+    .faq__title {
+        letter-spacing: 0.018rem;
+    }
+
+    .faq__answer {
+        line-height: 1.45;
+        letter-spacing: -0.005rem;
+    }
 }
