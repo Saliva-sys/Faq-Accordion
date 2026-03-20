@@ -44,13 +44,13 @@ const FaqAccordion = () => {
                 {faqData.map((item) => (
                     <article key={item.id} className="faq__area">
                         <button type='button' className="faq__button"
-                        onClick={() => handleToggle(item.id)}>
+                        onClick={() => handleToggle(item.id)}
+                        aria-expanded={openId === item.id}>
                             <h2 className="faq__title">{item.title}</h2>
                             <span className="faq__icon">
-                                {openId === item.id 
-                                    ? <img src="./icon-minus.svg" alt={openId === item.id ? "collapse" : "expand"} /> 
-                                    : <img src="./icon-plus.svg" alt={openId === item.id ? "collapse" : "expand"}/>
-                                }
+                                <img 
+                                    src={openId === item.id ? "./icon-minus.svg" : "./icon-plus.svg"} 
+                                    alt={openId === item.id ? "collapse" : "expand"} />
                             </span>
                         </button>
 
