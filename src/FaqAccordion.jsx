@@ -34,7 +34,7 @@ const FaqAccordion = () => {
   }
 
   return (
-    <main>
+    <div className="faq-container">
         <div className="main__space">
             <h1 className="faq__main-title">
                 <img src="./icon-star.svg" className="title__icon" alt="star"/>
@@ -46,7 +46,7 @@ const FaqAccordion = () => {
                         <button type='button' className="faq__button"
                         onClick={() => handleToggle(item.id)}
                         aria-expanded={openId === item.id}>
-                            <h2 className="faq__title">{item.title}</h2>
+                            <span className="faq__title">{item.title}</span>
                             <span className="faq__icon">
                                 <img 
                                     src={openId === item.id ? "./icon-minus.svg" : "./icon-plus.svg"} 
@@ -67,7 +67,7 @@ const FaqAccordion = () => {
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className="attribution-link" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
             Coded by <a href="https://github.com/Saliva-sys" className="attribution-link" target="_blank" rel="noopener noreferrer">Adriana Weidlichova</a>.
         </footer>
-    </main>
+    </div>
   );
 };
 

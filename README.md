@@ -86,21 +86,21 @@ I used the <article> tag to wrap each question and answer pair, which improves t
 
 ```js
 <article key={item.id} className="faq__area">
-    <button type='button' className="faq__button"
-    onClick={() => handleToggle(item.id)}
-    aria-expanded={openId === item.id}>
-        <h2 className="faq__title">{item.title}</h2>
-        <span className="faq__icon">
-            <img 
-                src={openId === item.id ? "./icon-minus.svg" : "./icon-plus.svg"} 
-                alt={openId === item.id ? "collapse" : "expand"} />
-        </span>
-    </button>
+  <button type='button' className="faq__button"
+  onClick={() => handleToggle(item.id)}
+  aria-expanded={openId === item.id}>
+      <span className="faq__title">{item.title}</span>
+      <span className="faq__icon">
+          <img 
+              src={openId === item.id ? "./icon-minus.svg" : "./icon-plus.svg"} 
+              alt={openId === item.id ? "collapse" : "expand"} />
+      </span>
+  </button>
 
-    {openId === item.id && (
-        <p className="faq__answer">{item.answer}</p>
-    )}
-    <hr className="faq__divider" />
+  {openId === item.id && (
+      <p className="faq__answer">{item.answer}</p>
+  )}
+  <hr className="faq__divider" />
 </article>
 ```
 
